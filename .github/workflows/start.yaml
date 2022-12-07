@@ -3,10 +3,24 @@ name: CI JOBS
 on: push
 
 jobs:
-  starter:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: printing the calendar
+      - name: print calendar
         run: cal
-      - name: printing the date
+      - name: print date
         run: date
+
+  job2:
+    runs-on: macos-latest
+    steps:
+      - name: print calendar
+        run: cal
+      - name: print date
+        run: date
+
+  job3:
+    runs-on: windows-latest
+    steps:
+      - name: print date
+        run: Get-Date
