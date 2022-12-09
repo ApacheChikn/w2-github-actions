@@ -6,13 +6,14 @@ jobs:
   job1:
     runs-on: ubuntu-20.04
     steps:
-      - name: print date
-        run: date
       - name: print calendar
         run: cal
+      - name: print date
+        run: date
 
   job2:
     runs-on: macos-latest
+    needs: [job1]
     steps:
       - name: print calendar
         run: cal
@@ -21,6 +22,7 @@ jobs:
 
   job3:
     runs-on: windows-latest
+    needs: [job1, job2]
     steps:
       - name: print date
         run: Get-Date
