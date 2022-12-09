@@ -4,10 +4,10 @@ on: push
 
 jobs:
   job1:
-    runs-on: centos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: print calendar
-        run: cal
+        run: ncal
       - name: print date
         run: date
 
