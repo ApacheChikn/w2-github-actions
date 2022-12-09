@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print calendar
-        run: cal
+        run: sudo cal
       - name: print date
         run: date
 
