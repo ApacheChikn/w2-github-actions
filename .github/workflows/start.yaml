@@ -6,10 +6,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: print calendar
-        run: ncal
       - name: print date
         run: date
+      - name: print calendar
+        run: cal
 
   job2:
     runs-on: macos-latest
